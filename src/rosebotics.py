@@ -14,6 +14,14 @@ class StopAction(Enum):
     HOLD = 'hold'
 
 
+class Snatch3rRobot(object):
+    """A snatch3r robot"""
+
+    def __init__(self, left_wheel_port=ev3.OUTPUT_B, right_wheel_port=ev3.OUTPUT_C):
+        self.left_wheel = Wheel(left_wheel_port)
+        self.right_wheel = Wheel(right_wheel_port)
+
+
 class Wheel(object):
     def __init__(self, port, default_duty_cycle_percent=100,
                  default_stop_action=StopAction.BRAKE.value):
