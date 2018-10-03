@@ -15,8 +15,8 @@ def main():
 def run_tests():
     """ Runs various tests. """
     #run_test_go_stop()
-    run_test_forward_for()
-
+    #run_test_forward_for()
+    run_test_turn()
 
 def run_test_go_stop():
     """ Tests the   go   and   stop   Snatch3rRobot methods. """
