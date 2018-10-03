@@ -45,8 +45,9 @@ def run_test_forward_for():
 
 
 def run_test_turn():
-    robot = rb.Snatch3rRobot
+    robot = rb.Snatch3rRobot()
     seconds = 5
     duty_cycle = 50
     robot.turn(seconds, duty_cycle)
+    
 main()
