@@ -51,7 +51,7 @@ class Snatch3rRobot(object):
             self.right_wheel.start_spinning(duty_cycle)
             if t == t + seconds:
                 self.right_wheel.stop_spinning()
-                break
+            break
 
 
 class Wheel(object):
