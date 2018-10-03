@@ -36,7 +36,7 @@ class Snatch3rRobot(object):
             self.right_wheel.start_spinning(-x)
             if now + n == time.now:
                 break
- def forward_for(self, seconds, duty_cycle):
+    def forward_for(self, seconds, duty_cycle):
         t = time.time()
         while True:
             self.go(duty_cycle, duty_cycle)
