@@ -31,7 +31,9 @@ class Snatch3rRobot(object):
         self.right_wheel.stop_spinning(stop_action)
 
     def forward_for(self, seconds, duty_cycle):
-        while time.time() < time.time() + seconds:
+        while True:
+            if time.time() < time.time() + seconds:
+                break
             self.go(duty_cycle, duty_cycle)
 
     def turn(N, X):
