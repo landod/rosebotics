@@ -15,8 +15,8 @@ def main():
 def run_tests():
     """ Runs various tests. """
     #run_test_go_stop()
-    #run_test_forward_for()
-    run_test_turn()
+    run_test_forward_for()
+    #run_test_turn()
 
 def run_test_go_stop():
     """ Tests the   go   and   stop   Snatch3rRobot methods. """
@@ -40,7 +40,7 @@ def run_test_go_stop():
     print(robot.left_wheel.get_degrees_spun())
 
 def run_test_forward_for():
-    robot = rb.Snatch3rRobot
+    robot = rb.Snatch3rRobot()
     robot.forward_for(5, 50)
 
 
@@ -49,5 +49,5 @@ def run_test_turn():
     seconds = 5
     duty_cycle = 50
     robot.turn(seconds, duty_cycle)
-    
+
 main()
