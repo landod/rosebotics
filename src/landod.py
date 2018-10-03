@@ -40,6 +40,7 @@ def run_test_go_stop():
     print(robot.left_wheel.get_degrees_spun())
 
 def run_test_forward_for():
+    robot = rb.Snatch3rRobot
     robot.forward_for(5, 50)
 
 
