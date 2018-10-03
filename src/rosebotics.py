@@ -36,15 +36,13 @@ class Snatch3rRobot(object):
                 break
             self.go(duty_cycle, duty_cycle)
 
-    def turn(N, X):
+    def turn(self, seconds, duty_cycle):
         import time
-
-        robot = rb.Snatch3rRobot()
 
         while True:
             t = time.time()
-            robot.right_wheel.start_spinning(X)
-            if t == time.time() + N:
+            self.right_wheel.start_spinning(duty_cycle)
+            if t == time.time() + seconds:
                 break
 
 
