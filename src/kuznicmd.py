@@ -9,8 +9,8 @@ import time
 
 def main():
     """ Runs tests. """
-    run_tests()
-
+    #run_tests()
+    run_test_forward_for()
 
 def run_tests():
     """ Runs various tests. """
@@ -42,7 +42,7 @@ def run_test_go_stop():
 def run_test_forward_for():
     robot = rb.Snatch3rRobot()
 
-robot.forward_for(6, 75)
+    robot.forward_for(6, 75)
 
 
 main()
