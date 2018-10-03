@@ -34,6 +34,17 @@ class Snatch3rRobot(object):
         while time.time() < time.time() + seconds:
             self.go(duty_cycle, duty_cycle)
 
+    def turn(N, X):
+        import time
+
+        robot = rb.Snatch3rRobot()
+
+        while True:
+            t = time.time()
+            robot.right_wheel.start_spinning(X)
+            if t == time.time() + N:
+                break
+
 
 class Wheel(object):
     def __init__(self, port, default_duty_cycle_percent=100,
