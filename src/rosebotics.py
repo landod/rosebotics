@@ -38,9 +38,9 @@ class Snatch3rRobot(object):
                 break
     def forward_for(self, seconds, duty_cycle):
         t = time.time()
-        while True:
-            self.go(duty_cycle, duty_cycle)
-            if t + seconds - time.time() == 0:
+        while time.time() < t + seconds:
+                self.go(duty_cycle,duty_cycle)
+            if time.time() > t + seconds:
                 self.stop()
 
     def turn(self, seconds, duty_cycle):
