@@ -39,10 +39,10 @@ class Snatch3rRobot(object):
     def turn(self, seconds, duty_cycle):
         import time
 
+        t = time.time()
         while True:
-            t = time.time()
             self.right_wheel.start_spinning(duty_cycle)
-            if t == time.time() + seconds:
+            if t == t + seconds:
                 break
 
 
