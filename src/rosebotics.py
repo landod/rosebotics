@@ -39,7 +39,7 @@ class Snatch3rRobot(object):
     def forward_for(self, seconds, duty_cycle):
         t_end = time.time() + seconds
         while time.time() < t_end:
-            self.go(duty_cycle,duty_cycle)
+            self.go(duty_cycle, duty_cycle)
             if time.time() > t_end:
                 self.stop()
  
