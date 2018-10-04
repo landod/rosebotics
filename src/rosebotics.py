@@ -37,12 +37,12 @@ class Snatch3rRobot(object):
             if now + n == time.now:
                 break
     def forward_for(self, seconds, duty_cycle):
-        t = time.time()
-        while time.time() < t + seconds:
-                self.go(duty_cycle,duty_cycle)
-            if time.time() > t + seconds:
+        t_end = time.time() + seconds
+        while time.time() < t_end:
+            self.go(duty_cycle,duty_cycle)
+            if time.time() > t_end:
                 self.stop()
-
+ 
     def turn(self, seconds, duty_cycle):
         import time
 
